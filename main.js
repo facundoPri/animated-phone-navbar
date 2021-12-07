@@ -1,6 +1,10 @@
-import './style.css'
-
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+const list = document.querySelectorAll(".list");
+function activeLink() {
+  list.forEach((item) => {
+    item.classList.remove("active");
+    this.classList.add("active");
+  });
+}
+list.forEach((item) => {
+  item.addEventListener("click", activeLink);
+});
